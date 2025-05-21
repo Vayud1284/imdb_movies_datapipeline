@@ -1,0 +1,10 @@
+.env
+__pycache__/
+*.pyc
+
+# Ignore logs folder
+logs/
+
+# Ignore everything in data/raw except netflix_titles.csv
+data/raw/*
+!data/raw/imdb-movies-dataset.csv
