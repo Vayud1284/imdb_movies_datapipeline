@@ -13,3 +13,8 @@ to_process(df,process_path)
 
 
 
+'''d=pd.read_csv(raw_path)
+d.drop_duplicates(inplace=True)
+d.columns=[col.replace("(min)",'') for col in d.columns]
+d.columns=d.columns.str.strip().str.lower().str.replace(" ","_")
+print(d.dtypes)'''
