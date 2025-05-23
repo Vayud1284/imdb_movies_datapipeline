@@ -13,4 +13,8 @@ def process_data(data:pd.DataFrame)->pd.DataFrame:
 
     #convert review counts and votes into float
     data[["review_count","votes"]]=data[["review_count","votes"]].apply(pd.to_numeric, errors="coerce")
+    data.fillna({"certifacate":"not known","genre":"not known","director":"Not known"},inplace=True)
+    data["year"]=data["year"].ffill()
+    data["duration"]=data["duration"].fillna(data["duration"].mean())
+    data["main_genre"]=data["genre"].apply(lambda x:x.split(",")[0])
     return data
