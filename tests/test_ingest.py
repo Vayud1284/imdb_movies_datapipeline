@@ -7,7 +7,7 @@ class TestIngest(unittest.TestCase):
 
     def setUp(self):
         # Setup: create a small dummy CSV file
-        self.test_file = "tests/test_data.csv"
+        self.test_file = "test_data.csv"
         data = {
             "title": ["Movie A", "Movie B"],
             "type": ["Movie", "TV Show"]
@@ -29,3 +29,5 @@ class TestIngest(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+    #python -m unittest tests.test_ingest
