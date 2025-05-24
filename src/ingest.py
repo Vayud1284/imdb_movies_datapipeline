@@ -3,7 +3,8 @@ import pandas as pd
 
 def load_csv(data)->pd.DataFrame:
     if os.path.exists(data):
-        to_df=pd.read_csv(data)
+         raise FileNotFoundError(f"File not found: {data}")
+    to_df=pd.read_csv(data)
     return to_df
 
 def to_process(data:pd.DataFrame,path):
